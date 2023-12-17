@@ -37,16 +37,11 @@ const createSnow = (density) => {
 
 createTree(12);
 createSnow(300); //48
-function audiox() {
-    var audio = document.getElementById('miAudio');
 
-    // Verifica si la reproducción está en pausa o si es la primera vez que se presiona el botón
-    if (audio.paused) {
-        audio.play();
-    } else {
-        // Si ya está reproduciendo, detén y reinicia la reproducción
-        audio.pause();
-        audio.currentTime = 0;
-        audio.play();
-    }
-}
+window.addEventListener('load', function () {
+    var audio = new Audio('audio/navidad.mp3');
+    audio.play();
+});
+
+
+
