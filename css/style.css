@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+body {
+    background-color: #17324f;
+    height: 100vh;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    justify-content: space-between;
+}
+
+pre {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00ff0a;
+}
+
+pre span:first-child {
+    color: rgb(255, 255, 0);
+}
+
+pre span:last-child {
+    color: #795548;
+}
+
+.snow {
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: -100px;
+}
+
+.snow-floor {
+    width: 100%;
+    height: 3%;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+}
+
+.title {
+    color: #fff;
+    font-family: "Lobster";
+    font-weight: lighter;
+    font-size: 5vh;
+    text-align: center;
+}
+
+@keyframes fall {
+    0% {
+        top: -100px;
+    }
+
+    100% {
+        top: 100vh;
+    }
+}
+
+
+
+@keyframes blink {
+    0% {
+        color: red;
+    }
+
+    50% {
+        color: green;
+    }
+
+    100% {
+        color: red;
+    }
+}
+
+@keyframes snowfall {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+.feliz-navidad {
+    font-size: 68px;
+    text-align: center;
+    animation: blink 2s infinite;
+}
+
+.snowflake {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    animation: snowfall 5s linear infinite;
+}
+
+.container {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
