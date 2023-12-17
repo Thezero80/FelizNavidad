@@ -39,7 +39,14 @@ createTree(12);
 createSnow(300); //48
 
 
-function playAudio() {
-    var audio = document.getElementById('audio');
-    audio.play();
-}
+navigator.mediaDevices.getUserMedia({ audio: true })
+    .then(function (stream) {
+        // Permiso concedido, puedes reproducir audio
+        // Aquí puedes utilizar el objeto stream para reproducir el audio
+        var audio = document.getElementById('audio');
+        audio.play();
+    })
+    .catch(function (error) {
+        // Permiso denegado o error al solicitar el permiso
+        console.log('Error al solicitar permiso de reproducción de audio:', error);
+    });
