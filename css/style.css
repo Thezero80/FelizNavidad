@@ -114,3 +114,36 @@ pre span:last-child {
     height: 200px;
     overflow: hidden;
 }
+
+.autor {
+    color: #0bf303;
+    font-family: "Lobster";
+    font-weight: lighter;
+    font-size: 5vh;
+    text-align: center;
+}
+
+.flotante {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Arial', sans-serif;
+    font-size: 44px;
+    color: red;
+    animation: flotar 5s infinite ease-in-out;
+}
+
+@keyframes flotar {
+    0% {
+        transform: translate(-50%, -50%);
+    }
+
+    50% {
+        transform: translate(-50%, -40%);
+    }
+
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}

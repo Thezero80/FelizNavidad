@@ -8,18 +8,21 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body onclick="playAudio()">
+<body onload="redireccionarSiEsPC()">
     <main class="main-container">
         <h1 class="title">¡Que tengan una bonita!</h1>
         <div class="container">
             <h1 class="feliz-navidad">Feliz Navidad</h1>
+            <div class="flotante">
+                <span id="txtd">Les Decea Fabian</span>
+            </div>
             <audio id="audio" src="audio/navidad.mp3"></audio>
             <div class="snowflake"></div>
         </div>
     </main>
 
-    <div class="snow-floor"><p class="autor">Thezero</p></div>
-    
+    <div class="snow-floor"></div>
+
     <script src="js/script.js"></script>
 </body>
 

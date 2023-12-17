@@ -50,3 +50,27 @@ navigator.mediaDevices.getUserMedia({ audio: true })
         // Permiso denegado o error al solicitar el permiso
         console.log('Error al solicitar permiso de reproducción de audio:', error);
     });
+
+
+
+function esPC() {
+    const userAgent = navigator.userAgent;
+    const mobileKeywords = ['Mobi', 'Android', 'webOS', 'iPhone', 'iPad', 'iPod', 'BlackBerry', 'Windows Phone'];
+
+    for (let i = 0; i < mobileKeywords.length; i++) {
+        if (userAgent.indexOf(mobileKeywords[i]) !== -1) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+// Función para redireccionar en caso de ser PC
+function redireccionarSiEsPC() {
+    if (esPC()) {
+        //window.location.href = 'error.html';
+        var autor = document.getElementById("txtd");
+        autor.style.display = "none";
+    }
+}
