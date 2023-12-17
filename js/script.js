@@ -38,10 +38,8 @@ const createSnow = (density) => {
 createTree(12);
 createSnow(300); //48
 
-window.addEventListener('load', function () {
-    var audio = new Audio('audio/navidad.mp3');
+
+function playAudio() {
+    var audio = document.getElementById('audio');
     audio.play();
-});
-
-
-
+}
